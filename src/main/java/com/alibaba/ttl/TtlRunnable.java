@@ -20,7 +20,7 @@ import static com.alibaba.ttl.TransmittableThreadLocal.Transmitter.*;
  * {@link TtlRunnable} decorate {@link Runnable} to get {@link TransmittableThreadLocal} value
  * and transmit it to the time of {@link Runnable} execution, needed when use {@link Runnable} to thread pool.
  * <p>
- * Use factory methods {@link #get} / {@link #gets} to create instance.
+ * Use factory methods {@link #get} / {@link #gets} to create instance.asdasdasd
  * <p>
  * Other TTL Wrapper for common {@code Functional Interface} see {@link TtlWrappers}.
  *
@@ -57,6 +57,7 @@ public final class TtlRunnable implements Runnable, TtlWrapper<Runnable>, TtlEnh
 
         final Object backup = replay(captured);
         try {
+            // git代码提交测试2423422asdfasdf
             runnable.run();
         } finally {
             restore(backup);
